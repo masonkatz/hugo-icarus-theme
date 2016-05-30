@@ -1917,7 +1917,7 @@ pre .javascript .function {
   background-position: center;
 }
 #recent-post li .item-thumbnail .thumbnail .thumbnail-none {
-  background-image: url("images/thumb-default-small.png");
+#  background-image: url("images/thumb-default-small.png");
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
