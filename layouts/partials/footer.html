@@ -1,11 +1,30 @@
-<footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; {{.Now.Format "2006"}}
-      {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }}
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-inline">
+                    <li>
+                        <a href="{{ .Site.Params.home }}#intro">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="{{ .Site.Params.home }}#about">About</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a class="page-scroll" href="{{.Site.BaseURL }}">Blog</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="{{ .Site.Params.home }}#services">Services</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; {{ .Title }} All Rights Reserved</p>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
-
-{{ partial "footer_js" . }}
-{{ partial "footer_custom_js" . }}
+{{ partial "js.html" . }}
+</body>
+</html>

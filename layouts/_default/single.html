@@ -1,8 +1,7 @@
 {{ partial "head" . }}
+{{ partial "nav" . }}
 
 <div id="container">
-	{{ partial "header" . }}
-   	
    	<div class="outer">
    		{{ if .IsPage | and (not .Params.disable_profile) }}
 	    {{ partial "profile" . }}
@@ -17,5 +16,3 @@
 </div>
 
 {{ partial "footer" . }}
-</body>
-</html>

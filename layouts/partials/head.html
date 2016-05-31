@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
     <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
-    {{ .Hugo.Generator }}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
@@ -15,13 +15,21 @@
       <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
       <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
+
     <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
-    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
+
+
+    <link rel="stylesheet" href="{{ .Site.Params.code }}bootstrap/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/monokai.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}fancybox/jquery.fancybox.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{{ .Site.Params.code }}fancyBox/source/jquery.fancybox.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{{ .Site.Params.code }}font-awesome/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/google_news.html" . }}
@@ -38,4 +46,4 @@
     {{ end }}
 </head>
 <body>
-<div class="container">
+
